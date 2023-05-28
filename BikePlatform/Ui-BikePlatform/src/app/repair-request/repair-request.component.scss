@@ -1,0 +1,30 @@
+h2{
+  margin-left: 15px;
+}
+
+form{
+  margin: 15px;
+
+  label {
+    display: block;
+  }
+
+  input, button{
+    display: block;
+    width: 250px;
+    margin-bottom: 15px;
+  }
+
+  small{
+    color: red;
+    margin-top: -12px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+
+}
+
+.description{
+  margin-top: 0px !important;
+}

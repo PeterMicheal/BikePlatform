@@ -1,0 +1,21 @@
+<h2>Repair request</h2>
+
+<form #requestForm="ngForm" (ngSubmit)="createRepairRequest(requestForm)">
+  <label for="name">Name</label>
+  <input type="text" placeholder="Name" name="name" ngModel required minlength="5" #name="ngModel" [(ngModel)]="newRepairRequest.name">
+  <small *ngIf="name.invalid">Please Type a customer name (at least 5 characters)</small>
+
+  <label for="email">Email</label>
+  <input type="email" placeholder="Email" name="email" ngModel required  #email="ngModel" email="true" [(ngModel)]="newRepairRequest.email">
+  <small *ngIf="email.invalid">Please Type a valid email</small>
+
+  <label for="description">Description</label>
+  <textarea type="text" placeholder="Description" name="description" ngModel required #description="ngModel" [(ngModel)]="newRepairRequest.description"></textarea>
+  <small *ngIf="description.invalid" class="description">Please Type a description</small>
+
+  <button type="submit" [disabled]="requestForm.invalid">Add Request</button>
+</form>
+
+
+
+
